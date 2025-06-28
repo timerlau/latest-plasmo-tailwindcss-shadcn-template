@@ -2,60 +2,91 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 这里的配色，也可以在 shadcn 的官网主题里，去copy 粘贴过来 */
 @layer base {
+  /* ☀️ Light Mode - 白天·晴空·森林 ☀️ */
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* 基础色调 - 像夏日清晨的天空和森林 */
+    --background: 210 20% 98%; /* 옅은 하늘색 (Pale Sky Blue) */
+    --foreground: 20 14% 21%; /* 暗い森 (Dark Forest) */
+
+    /* 卡片 & 弹出层 - 像温暖的和纸 */
+    --card: 0 0% 100%; /* 和紙 (Washi Paper) */
+    --card-foreground: 20 14% 21%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --popover-foreground: 20 14% 21%;
+
+    /* 主要 & 次要动作 - 龙猫森林的绿和卡西法的火焰 */
+    --primary: 158 44% 55%; /* トトロの森 (Totoro's Forest) */
+    --primary-foreground: 210 20% 98%;
+    --secondary: 35 85% 75%; /* カルシファーの炎 (Calcifer's Fire) */
+    --secondary-foreground: 20 14% 21%;
+
+    /* 柔和 & 强调色 - 云朵和波妞的海 */
+    --muted: 210 15% 90%; /* 雲 (Cloud) */
+    --muted-foreground: 24 10% 45%; /* 石畳 (Cobblestone) */
+    --accent: 195 85% 60%; /* ポニョの海 (Ponyo's Sea) */
+    --accent-foreground: 0 0% 100%;
+
+    /* 破坏性操作 - 琪琪的红色蝴蝶结 */
+    --destructive: 0 72% 51%; /* キキのリボン (Kiki's Ribbon) */
+    --destructive-foreground: 0 0% 100%;
+
+    /* 边框 & 输入框 & 焦点环 */
+    --border: 214 20% 85%; /* 川辺の石 (River Stone) */
+    --input: 214 20% 80%;
+    --ring: 158 44% 55%; /* 焦点环跟随主色 */
+
+    /* 圆角 */
     --radius: 0.5rem;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
+
+    /* 图表颜色 - 选取大自然的调色盘 */
+    --chart-1: 158 44% 55%; /* 森林绿 (Forest Green) */
+    --chart-2: 195 85% 60%; /* 海洋蓝 (Sea Blue) */
+    --chart-3: 35 85% 75%; /* 暖阳橙 (Warm Sun Orange) */
+    --chart-4: 25 65% 60%; /* 大地褐 (Earthy Brown) */
+    --chart-5: 310 30% 70%; /* 薰衣草紫 (Lavender Purple) */
   }
-  /* 暗主题 */
+
+  /* 🌙 Dark Mode - 夜晚·灯笼·星空 🌙 */
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
+    /* 基础色调 - 深邃的午夜蓝和温柔的月光 */
+    --background: 222 30% 15%; /* 夜空 (Night Sky) */
+    --foreground: 210 20% 90%; /* 月光 (Moonlight) */
+
+    /* 卡片 & 弹出层 - 像汤屋的深色木材 */
+    --card: 222 30% 18%; /* 油屋の木材 (Bathhouse Wood) */
+    --card-foreground: 210 20% 90%;
+    --popover: 222 30% 18%;
+    --popover-foreground: 210 20% 90%;
+
+    /* 主要 & 次要动作 - 夜色中更亮的魔法森林和灯笼光芒 */
+    --primary: 158 50% 65%; /* 魔法の森 (Enchanted Forest) */
+    --primary-foreground: 222 30% 15%;
+    --secondary: 35 75% 65%; /* 灯籠の光 (Lantern Glow) */
+    --secondary-foreground: 222 30% 15%;
+
+    /* 柔和 & 强调色 - 静谧的夜晚和深海 */
+    --muted: 222 25% 22%; /* 静かな夜 (Quiet Night) */
+    --muted-foreground: 210 20% 70%; /* 星屑 (Stardust) */
+    --accent: 195 75% 60%; /* 深海 (Deep Sea) */
+    --accent-foreground: 0 0% 100%;
+
+    /* 破坏性操作 */
+    --destructive: 0 63% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* 边框 & 输入框 & 焦点环 */
+    --border: 222 25% 28%;
+    --input: 222 25% 30%;
+    --ring: 158 50% 65%;
+
+    /* 图表颜色 - 夜晚星空下的色彩 */
+    --chart-1: 158 50% 65%; /* 夜森林绿 (Night Forest Green) */
+    --chart-2: 195 75% 60%; /* 午夜蓝 (Midnight Blue) */
+    --chart-3: 35 75% 65%; /* 炉火橙 (Hearth Fire Orange) */
+    --chart-4: 260 50% 70%; /* 银河紫 (Galaxy Purple) */
+    --chart-5: 50 80% 60%; /* 星光黄 (Starlight Yellow) */
   }
 }
 
@@ -68,23 +99,27 @@
   }
 }
 
-/* width */
+/* 宽度 */
 ::-webkit-scrollbar {
   width: 6px;
 }
 
-/* Track */
+/* 轨道 */
 ::-webkit-scrollbar-track {
-  @apply bg-background;
+  @apply bg-background; /* 使用主题背景色，完美融合 */
 }
 
-/* Handle */
+/* 滑块 */
 ::-webkit-scrollbar-thumb {
-  @apply bg-slate-300;
+  background-color: hsl(
+    var(--muted-foreground) / 0.5
+  ); /* 使用柔和的前景色，并降低透明度 */
   border-radius: 5px;
 }
 
-/* Handle on hover */
+/* 鼠标悬停在滑块上 */
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-slate-400;
+  background-color: hsl(
+    var(--muted-foreground) / 0.8
+  ); /* 悬停时提高不透明度，提供反馈 */
 }

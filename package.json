@@ -1,8 +1,8 @@
 {
-  "name": "mytest2",
-  "displayName": "Mytest2",
-  "version": "0.0.1",
-  "description": "mytest2",
+  "name": "plamo-template",
+  "displayName": "Plasmo Template",
+  "version": "1.0.0",
+  "description": "Latest Plasmo template using tailwindcss and shadcn/ui",
   "author": "cz",
   "scripts": {
     "dev": "plasmo dev",
