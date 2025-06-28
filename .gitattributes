@@ -1,0 +1,21 @@
+# Automatically detect text files
+* text=auto
+
+# Clearly specify common file types
+*.js text
+*.ts text
+*.tsx text
+*.css text
+*.html text
+*.json text
+*.md text
+*.yml text
+*.yaml text
+
+# Binary file
+*.png binary
+*.jpg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.zip binary
